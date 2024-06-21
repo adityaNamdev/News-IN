@@ -29,7 +29,7 @@ const CategoryDetails = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `https://newsapi.org/v2/top-headlines?language=en&apiKey=${API_KEY}`,
+          `https://newsapi.org/v2/top-headlines?language=en&apiKey=${process.env.REACT_APP_API_KEY}`,
           {
             params: {
               page,
