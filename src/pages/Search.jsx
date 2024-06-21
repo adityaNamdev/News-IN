@@ -31,7 +31,7 @@ const Search = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://newsapi.org/v2/everything?apiKey=${API_KEY}`,
+        `https://newsapi.org/v2/everything?apiKey=${process.env.REACT_APP_API_KEY}`,
         {
           params: {
             q: searchQuery,
