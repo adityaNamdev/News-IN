@@ -46,7 +46,7 @@ NewsIN uses the NewsAPI to fetch news articles. To use NewsAPI, you need an API 
 Once you have the API key, create a .env file in the root directory of your project and add your API key as follows:
 
 ```bash
- API_KEY = your_api_key_here
+ REACT_APP_API_KEY = your_api_key_here
 ```
 ## Author
 
