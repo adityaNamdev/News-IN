@@ -19,7 +19,7 @@ const Home = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://newsapi.org/v2/top-headlines?apiKey=${API_KEY}`,
+        `https://newsapi.org/v2/top-headlines?apiKey=${process.env.REACT_APP_API_KEY}`,
         {
           params: {
             pageSize,
@@ -39,7 +39,7 @@ const Home = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://newsapi.org/v2/top-headlines?language=en&apiKey=${API_KEY}`,
+        `https://newsapi.org/v2/top-headlines?language=en&apiKey=${process.env.REACT_APP_API_KEY}`,
         {
           params: {
             pageSize: 4,
@@ -58,7 +58,7 @@ const Home = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://newsapi.org/v2/everything?q=all&apiKey=${API_KEY}`
+        `https://newsapi.org/v2/everything?q=all&apiKey=${process.env.REACT_APP_API_KEY}`
       );
       setNews(response.data.articles);
     } catch (error) {
