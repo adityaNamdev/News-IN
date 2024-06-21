@@ -27,7 +27,7 @@ const TopHeadlines = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://newsapi.org/v2/top-headlines?apiKey=${API_KEY}`,
+        `https://newsapi.org/v2/top-headlines?apiKey=${process.env.REACT_APP_API_KEY}`,
         {
           params: {
             page,
